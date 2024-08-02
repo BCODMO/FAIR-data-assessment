@@ -4,30 +4,62 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix : <urn:example:> .
 
-:F1DShape a sh:NodeShape ;
-    sh:name "F1D" ;
-    sh:description "Description of F1D - Identifier" ;
-    schema:question fip:FIP-Question-F1-D ;
-    sh:order 1 ;
-	sh:targetClass schema:Dataset ;
-	sh:property [
-      sh:path (
-        schema:identifier
-      ) ;
-      sh:name "F1 Data - Any Identifier" ;
-      sh:message "A resource should have any identifier" ;
-    ] .
 
-:F1DDOIShape a sh:NodeShape ;
-    sh:name "F1D - DOI" ;
-    sh:description "Description of F1D DOI" ;
+#### QUESTIONS ####
+:Question_F1D
+	a sh:PropertyGroup ;
     schema:question fip:FIP-Question-F1-D ;
+	sh:order 1 ;
+	sh:name "F1-D" .
+
+:Question_F1MD
+	a sh:PropertyGroup ;
+    schema:question fip:FIP-Question-F1-MD ;
+	sh:order 2 ;
+	sh:name "F1-MD" .
+
+
+#### NodeShapes ####
+
+:F1D_Identifier a sh:NodeShape ;
+    sh:name "F1-D: Any Identifier" ;
+    sh:group :Question_F1D ;
+    sh:order 1 ;
+    sh:targetClass schema:Dataset ;
+    sh:property :f1d_identifier .
+
+:F1D_DOI a sh:NodeShape ;
+    sh:name "F1D: DOI" ;
+    sh:group :Question_F1D ;
     sh:order 2 ;
 	sh:severity sh:Warning ;
 	sh:targetClass schema:Dataset ;
 	sh:property :doivalue, :doischeme .
 
-:doivalue a sh:PropertyShape;
+:F1MD_URL a sh:NodeShape ;
+  sh:name "F1-MD: URL" ;
+  sh:group :Question_F1MD ;
+  sh:order 1 ;
+  sh:targetClass schema:Dataset ;
+  sh:property :f1md_url .
+
+:F1MD_IRI a sh:NodeShape ;
+  sh:name "F1-MD: IRI" ;
+  sh:group :Question_F1MD ;
+  sh:order 2 ;
+  sh:targetClass schema:Dataset ;
+  sh:property :f1md_iri .
+
+
+#### PropertyShapes ####
+
+:f1d_identifier a sh:PropertyShape ;
+    sh:path schema:identifier ;
+    sh:minCount 1 ;
+    sh:name "F1 Data - Any Identifier" ;
+    sh:message "A resource should have any identifier" .
+
+:f1d_doivalue a sh:PropertyShape;
   sh:path (
     schema:identifier
     schema:value
@@ -38,14 +70,27 @@
   sh:name "F1 Data - DOI Value" ;
   sh:message "A resource should a DOI" .
 
-:doischeme a sh:PropertyShape;
+:f1d_doischeme a sh:PropertyShape;
   sh:path (
     schema:identifier
     schema:propertyID
   ) ;
-  sh:minCount 2 ;
+  sh:minCount 1 ;
   #sh:value "https://registry.identifiers.org/registry/doi" ;
   sh:pattern "doi" ;    # contains 'doi'
   sh:flags "i" ;       	# Ignore case
   sh:name "F1 Data - DOI Scheme" ;
   sh:message "A resource should a DOI Scheme" .
+
+:f1md_url a sh:PropertyShape;
+  sh:path schema:url ;
+  sh:minCount 1 ;
+  sh:pattern "^http[s]*://" ;
+  sh:flags "i" ;       	# Ignore case
+  sh:name "F1 Metadata - URL" ;
+  sh:message "A resource should have a URL" .
+
+:f1md_iri a sh:PropertyShape;
+  sh:nodeKind sh:IRI ;
+  sh:name "F1 Metadata - IRI" ;
+  sh:message "A resource should have an IRI" .
