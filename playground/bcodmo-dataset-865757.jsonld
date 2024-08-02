@@ -1,0 +1,164 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "spdx": "http://spdx.org/rdf/terms#"
+    },
+    "@id": "https://www.bco-dmo.org/dataset/865757",
+    "url": "https://www.bco-dmo.org/dataset/865757",
+    "@type": "Dataset",
+    "name": "ZooSCAN images of zooplankton collected along physical gradients during OAPS MOCNESS tows during R/V Oceanus cruise OC473 in the northwest Atlantic in 2011 and R/V New Horizon cruise NH1208 in the northeast Pacific in 2012 and imaged in 2021-2022",
+    "alternateName": "ZooSCAN Images Along Physical Gradients from OAPS",
+    "abstract": "This dataset consists of the imaging portion of the study described below and includes ZooScan images of zooplankton collected during OAPS MOCNESS tows during R/V Oceanus cruise OC473 in the Northwestern Atlantic in 2011 and R/V New Horizon cruise NH1208 in the Northeastern Pacific in 2012. Day and night stations were sampled between 0 to 1000m depths from 35 to 50 N in the northwest Atlantic in 2011, and from 35 and 50N along CLIVAR line P17N in 2012. These representative subsamples of the formalin-preserved zooplankton community from each net were imaged in 2021 and 2022. \r\n\r\nProject description: The objective of this study was to determine how environmental variables shape zooplankton community structure in the midwater. Our primary overarching hypothesis was that the abundance and size class distribution of the zooplankton community are decoupled and are influenced by different environmental variables. Furthermore, differences in zooplankton community composition and diversity in the observed distinct oceanic biogeographical provinces additionally influences both factors. Since zooplankton contributions to biogeochemistry are size dependent, standard descriptions of zooplankton community (biomass, which is a product of size and abundance) are insufficient to generate a predictive understanding of the role of zooplankton in biogeochemical cycles. The project uses particle imaging technology and metabarcoding of archived biological samples in conjunction with open access hydrographic data from two cruises conducted in the N. Atlantic and N. Pacific to test these hypotheses. ",
+    "description": "\u003Cp\u003EAcknowledgment:\u003C/p\u003E\r\n\r\n\u003Cp\u003EThis dataset utilized samples and data funded by a previous NSF award (OCE-1041068) \u0022Horizontal and Vertical Distribution of Thecosome Pteropods in Relation to Carbonate Chemistry in the Northwest Atlantic and Northeast Pacific (OAPS)\u0022 https://www.bco-dmo.org/project/2154.\u003C/p\u003E\r\n",
+    "sameAs": [
+        "https://doi.org/10.26008/1912/bco-dmo.865757.1"
+    ],
+    "identifier": {
+        "@type": "PropertyValue",
+        "@id": "https://doi.org/10.26008/1912/bco-dmo.865757.1",
+        "propertyID": "https://registry.identifiers.org/registry/doi",
+        "value": "doi:10.26008/1912/bco-dmo.865757.1",
+        "url": "https://doi.org/10.26008/1912/bco-dmo.865757.1"
+    },
+    "datePublished": "2024-04-15",
+    "keywords": "zooplankton, imaging, community structure, oceans",
+    "creator": {
+        "@list": [
+            {
+                "@type": "Person",
+                "name": "Leocadio Blanco-Bercial",
+                "url": "https://www.bco-dmo.org/person/51108",
+                "identifier": {
+                    "@id": "https://orcid.org/0000-0003-0658-7183",
+                    "@type": "PropertyValue",
+                    "propertyID": "https://registry.identifiers.org/registry/orcid",
+                    "value": "orcid:0000-0003-0658-7183",
+                    "url": "https://orcid.org/0000-0003-0658-7183"
+                }
+            },
+            {
+                "@type": "Person",
+                "name": "Amy Maas",
+                "url": "https://www.bco-dmo.org/person/51589",
+                "identifier": {
+                    "@id": "https://orcid.org/0000-0002-3730-2876",
+                    "@type": "PropertyValue",
+                    "propertyID": "https://registry.identifiers.org/registry/orcid",
+                    "value": "orcid:0000-0002-3730-2876",
+                    "url": "https://orcid.org/0000-0002-3730-2876"
+                }
+            },
+            {
+                "@type": "Person",
+                "name": "Hannah Gossner",
+                "url": "https://www.bco-dmo.org/person/861958",
+                "identifier": {
+                    "@id": "https://orcid.org/0000-0001-9581-1110",
+                    "@type": "PropertyValue",
+                    "propertyID": "https://registry.identifiers.org/registry/orcid",
+                    "value": "orcid:0000-0001-9581-1110",
+                    "url": "https://orcid.org/0000-0001-9581-1110"
+                }
+            }
+        ]
+    },
+    "version": "1",
+    "license": [
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://spdx.org/licenses/CC-BY-4.0"
+    ],
+    "temporalCoverage": "2011-08-13/2022-01-01",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "33.5052 -144.737 50.0913 -41.7813",
+            "polygon": "33.5052,-144.737 50.0913,-144.737 50.0913,-41.7813 33.5052,-41.7813 33.5052,-144.737"
+        },
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "additionalType": "http://www.wikidata.org/entity/Q161779",
+                "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+                "name": "Spatial Reference System",
+                "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+            },
+            {
+                "@type": "PropertyValue",
+                "additionalType": "http://www.wikidata.org/entity/Q4018860",
+                "propertyID": "WKT",
+                "name": "Well-Known Text",
+                "value": "POLYGON ((-144.737 33.5052, -41.7813 33.5052, -41.7813 50.0913, -144.737 50.0913, -144.737 33.5052))"
+            }
+        ],
+        "description": "N. Atlantic and N. Pacific"
+    },
+    "publisher": {
+        "@id": "https://www.bco-dmo.org",
+        "@type": "Organization",
+        "name": "Biological and Chemical Data Management Office",
+        "alternateName": "BCO-DMO",
+        "url": "https://www.bco-dmo.org",
+        "sameAs": "http://www.re3data.org/repository/r3d100000012"
+    },
+    "provider": {
+        "@id": "https://www.bco-dmo.org"
+    },
+    "producer": [
+        {
+            "@type": "ResearchProject",
+            "name": "Quantifying the drivers of midwater zooplankton community structure",
+            "alternateName": "Zooplankton Gradients",
+            "description": "NSF Award Abstract:\u00a0\nProcesses in the midwater region below 200 m depth, also known as the twilight zone, represent a major unknown for the biology and chemistry of the ocean. Studies of animals drifting in the oceans, known as zooplankton, are scarce due to the difficulty and associated time and costs of sampling deep waters. The advent of automated image analysis and genetic tools is leading to a rapid increase in our knowledge of the diversity, abundances and size distribution of communities in shallow waters. However, our understanding of the deeper layers of the ocean is still in its infancy, and there are few studies that combine these three facets of the ecology of the zooplankton. The objective of this project is to leverage existing samples, obtained from previously NSF-funded research in the North Pacific and North Atlantic, to study how the abundances, diversity, and size distribution of zooplankton in the midwater vary with latitude and environmental factors. Automated image analyses provide information on abundance and size, and genetic analyses give unprecedented data on the diversity of the midwater community for the North Atlantic and the North Pacific, from subtropical to subarctic environments. This project provides high quality hands-on training opportunities for at least two undergraduate researchers and generates material for undergraduate and graduate courses. Two workshops train educators on the classroom use of the NSF-funded Biological and Chemical Oceanography Data Management Office (BCO-DMO) open access oceanographic data.\nRecent advances in image analysis and metabarcoding of zooplankton communities via new data tools are an opportunity to generate quantitative and predictive relationships between environmental drivers and zooplankton diversity, abundances and size distribution. While this information is available for plankton in epipelagic regions, the focus of this study is on midwater communities, which remain poorly characterized. Obtaining these data is the first step towards a quantitative analysis that assesses the impact of the midwater community on biogeochemical cycles. The project uses archived samples from two cruises conducted in the N. Atlantic and N. Pacific to test hypotheses about how temperature, midwater hypoxia, primary productivity and biogeographic province shape the size class structure, biodiversity and behavior (diurnal vertical migration) of zooplankton communities. These newly-generated image and metabarcoding datasets of the mesozooplankton community from 0-1000 m are cross-comparable with other ocean regions. These data describe how migratory and midwater resident zooplankton communities are structured by environmental variables and demonstrate how this influences their biogeochemical contributions (specifically active flux and midwater attenuation of flux). Data tools generated for the image analysis in combination with metabarcoding has broad application in plankton ecology and allows metanalysis of other datasets. The project is complementary to ongoing national and international projects that seek to describe the function and structure of the midwater. In contrast to existing modeling and process projects, this project covers a moderately large geographic area and thus provides a strong comparative foundation for broader community-wide assessment of the function of zooplankton in the twilight zone.\nThis award reflects NSF\u0027s statutory mission and has been deemed worthy of support through evaluation using the Foundation\u0027s intellectual merit and broader impacts review criteria.\n",
+            "url": "https://www.bco-dmo.org/project/817889"
+        }
+    ],
+    "subjectOf": [
+        {
+            "@type": "DataDownload",
+            "name": "ISO 19115-2 (NOAA Profile)",
+            "contentUrl": "https://darchive.mblwhoilibrary.org/server/api/core/bitstreams/1c167394-8f60-5f80-9ca5-011a82c76537/content",
+            "contentSize": "109711 bytes",
+            "encodingFormat": [
+                "http://www.isotc211.org/2005/gmd-noaa",
+                "application/xml"
+            ],
+            "encodesCreativeWork": "https://www.bco-dmo.org/dataset/865757",
+            "creativeWorkStatus": "Published",
+            "about": {
+                "@id": "https://www.bco-dmo.org/dataset/865757"
+            },
+            "spdx:checksum": {
+                "@type": "spdx:Checksum",
+                "spdx:checksumValue": "e802742320c1f16c8323d46d822a2ac5",
+                "spdx:checksumAlgorithm": {
+                    "@id": "spdx:checksumAlgorithm_md5"
+                }
+            }
+        }
+    ],
+    "measurementTechnique": [
+        "MOCNESS",
+        "ZooSCAN"
+    ],
+    "funding": [
+        {
+            "@type": "MonetaryGrant",
+            "url": "https://www.bco-dmo.org/award/817888",
+            "name": "OCE-1948162",
+            "funder": {
+                "@type": "FundingAgency",
+                "name": "NSF Division of Ocean Sciences",
+                "identifier": {
+                    "@id": "https://doi.org/10.13039/100000141",
+                    "@type": "PropertyValue",
+                    "propertyID": "https://registry.identifiers.org/registry/doi",
+                    "value": "doi:10.13039/100000141",
+                    "url": "https://doi.org/10.13039/100000141"
+                },
+                "alternateName": "NSF OCE"
+            },
+            "sameAs": "http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1948162"
+        }
+    ]
+}
