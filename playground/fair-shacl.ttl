@@ -1,0 +1,51 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix fip: <https://w3id.org/fair/fip/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <urn:example:> .
+
+:F1DShape a sh:NodeShape ;
+    sh:name "F1D" ;
+    sh:description "Description of F1D - Identifier" ;
+    schema:question fip:FIP-Question-F1-D ;
+    sh:order 1 ;
+	sh:targetClass schema:Dataset ;
+	sh:property [
+      sh:path (
+        schema:identifier
+      ) ;
+      sh:name "F1 Data - Any Identifier" ;
+      sh:message "A resource should have any identifier" ;
+    ] .
+
+:F1DDOIShape a sh:NodeShape ;
+    sh:name "F1D - DOI" ;
+    sh:description "Description of F1D DOI" ;
+    schema:question fip:FIP-Question-F1-D ;
+    sh:order 2 ;
+	sh:severity sh:Warning ;
+	sh:targetClass schema:Dataset ;
+	sh:property :doivalue, :doischeme .
+
+:doivalue a sh:PropertyShape;
+  sh:path (
+    schema:identifier
+    schema:value
+  ) ;
+  sh:minCount 1 ;
+  sh:pattern "^doi:" ;    # starts with 'doi:'
+  sh:flags "i" ;       	# Ignore case
+  sh:name "F1 Data - DOI Value" ;
+  sh:message "A resource should a DOI" .
+
+:doischeme a sh:PropertyShape;
+  sh:path (
+    schema:identifier
+    schema:propertyID
+  ) ;
+  sh:minCount 2 ;
+  #sh:value "https://registry.identifiers.org/registry/doi" ;
+  sh:pattern "doi" ;    # contains 'doi'
+  sh:flags "i" ;       	# Ignore case
+  sh:name "F1 Data - DOI Scheme" ;
+  sh:message "A resource should a DOI Scheme" .
