@@ -16,12 +16,30 @@
     schema:question fip:FIP-Question-F1-MD ;
 	sh:order 2 ;
 	sh:name "F1-MD" .
+
 :Question_F2
 	a sh:PropertyGroup ;
     schema:question fip:FIP-Question-F2 ;
-	sh:order 2 ;
+	sh:order 3 ;
 	sh:name "F2" .
 
+:Question_F3
+	a sh:PropertyGroup ;
+    schema:question fip:FIP-Question-F3 ;
+	sh:order 4 ;
+	sh:name "F3" .
+
+:Question_F4MD
+	a sh:PropertyGroup ;
+    schema:question fip:FIP-Question-F4MD ;
+	sh:order 5 ;
+	sh:name "F4-MD" .
+
+:Question_F4D
+	a sh:PropertyGroup ;
+    schema:question fip:FIP-Question-F4D ;
+	sh:order 6 ;
+	sh:name "F4-D" .
 
 #### NodeShapes ####
 
@@ -38,7 +56,7 @@
     sh:order 2 ;
 	sh:severity sh:Warning ;
 	sh:targetClass schema:Dataset ;
-	sh:property :doivalue, :doischeme .
+	sh:property :f1d_doivalue, :f1d_doischeme .
 
 :F1MD_URL a sh:NodeShape ;
   sh:name "F1-MD: URL" ;
@@ -58,8 +76,7 @@
   sh:name "F2: Schema.org" ;
   sh:group :Question_F2 ;
   sh:order 1 ;
-  sh:targetClass schema:Dataset ;
-  sh:minCount 2 .
+  sh:targetClass schema:Dataset .
 
 :F2_ISO19115-2_NOAA-Profile a sh:NodeShape ;
   sh:name "F2: ISO 19115-2 (NOAA Profile)" ;
@@ -68,7 +85,41 @@
   sh:targetClass schema:Dataset ;
   sh:property :f2_iso19115 .
 
+:F3_DOI a sh:NodeShape ;
+    sh:name "F3: DOI" ;
+    sh:group :Question_F3 ;
+    sh:order 2 ;
+	sh:severity sh:Warning ;
+	sh:targetClass schema:Dataset ;
+	sh:property :f1d_doivalue, :f1d_doischeme .
+
+:F4MD_Publisher a sh:NodeShape ;
+    sh:name "F4-MD: Publisher" ;
+    sh:group :Question_F4 ;
+    sh:order 1 ;
+	sh:targetClass schema:Dataset ;
+	sh:property :f4md_publisher .
+
+:F4D_Provider a sh:NodeShape ;
+    sh:name "F4-MD: Provider" ;
+    sh:group :Question_F4 ;
+    sh:order 2 ;
+	sh:targetClass schema:Dataset ;
+	sh:property :f4d_provider .
+
 #### PropertyShapes ####
+:f4d_provider a sh:PropertyShape ;
+  sh:path schema:provider ;
+  sh:minCount 1 ;
+  sh:name "F4MD - Provider" ;
+  sh:message "The resource has a provider." .
+
+:f4md_publisher a sh:PropertyShape ;
+  sh:path schema:publisher ;
+  sh:minCount 1 ;
+  sh:name "F4MD - Publisher" ;
+  sh:message "The resource has a publisher." .
+
 :f2_iso19115 a sh:PropertyShape ;
   sh:path (
     schema:subjectOf
